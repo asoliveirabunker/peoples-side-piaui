@@ -1,10 +1,11 @@
 /**
  * Slots de fotografia do site.
  *
- * Cada entrada descreve uma posição de imagem. Hoje todas renderizam como
- * PhotoPlaceholder (bloco de marca). Quando os arquivos oficiais chegarem,
- * basta trocar a entrada por um import real da imagem no componente
- * correspondente — labels e alt texts já estão prontos aqui.
+ * Cada entrada descreve uma posição de imagem. Hero e Presença já usam as
+ * fotos oficiais (assets CDN); as demais renderizam como PhotoPlaceholder
+ * (bloco de marca). Quando os arquivos oficiais chegarem, basta trocar a
+ * entrada por um import real da imagem no componente correspondente —
+ * labels e alt texts já estão prontos aqui.
  */
 export type PhotoSlot = {
   id: string;

@@ -1,7 +1,7 @@
 import { Ear, Hammer, Users } from "lucide-react";
-import { PhotoPlaceholder } from "./PhotoPlaceholder";
 import { Reveal } from "./Reveal";
 import { PHOTOS } from "@/data/photos";
+import abracoAsset from "@/assets/abraco.png.asset.json";
 
 const PRINCIPLES = [
   { icon: Users, title: "Estar perto", description: "Ouvir de perto." },
@@ -13,13 +13,36 @@ export function Presence() {
   return (
     <section id="presenca" className="grain relative overflow-hidden bg-brand-deep">
       <div className="mx-auto grid max-w-[1360px] lg:grid-cols-2">
-        <Reveal variant="clip" className="relative h-80 sm:h-96 lg:h-auto lg:min-h-[580px]">
-          <PhotoPlaceholder
-            label={PHOTOS.presence.label}
-            alt={PHOTOS.presence.alt}
-            square
-            className="absolute inset-0 h-full"
-          />
+        {/* Foto oficial do abraço — inteira visível (object-contain), com margem
+            garantida e cantos de "mira de foto" rentes à imagem */}
+        <Reveal variant="clip" className="relative">
+          <div className="flex h-full items-center justify-center px-6 py-10 sm:px-10 sm:py-12 lg:px-16 lg:py-20">
+            <div className="relative">
+              <div
+                aria-hidden="true"
+                className="absolute -left-2.5 -top-2.5 h-5 w-5 border-l-2 border-t-2 border-white/30"
+              />
+              <div
+                aria-hidden="true"
+                className="absolute -right-2.5 -top-2.5 h-5 w-5 border-r-2 border-t-2 border-white/30"
+              />
+              <div
+                aria-hidden="true"
+                className="absolute -bottom-2.5 -left-2.5 h-5 w-5 border-b-2 border-l-2 border-white/30"
+              />
+              <div
+                aria-hidden="true"
+                className="absolute -bottom-2.5 -right-2.5 h-5 w-5 border-b-2 border-r-2 border-white/30"
+              />
+              <img
+                src={abracoAsset.url}
+                alt={PHOTOS.presence.alt}
+                loading="lazy"
+                decoding="async"
+                className="block w-full max-w-[560px] rounded-md object-contain shadow-[0_28px_70px_-28px_color-mix(in_oklab,var(--color-night)_80%,transparent)]"
+              />
+            </div>
+          </div>
         </Reveal>
 
         <div className="relative z-10 flex flex-col justify-center px-5 py-16 md:px-10 lg:px-16 lg:py-24">
