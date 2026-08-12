@@ -62,29 +62,33 @@ export function Journey() {
         {/* Mosaico com as 4 fotos oficiais — orientação de cada imagem dita o slot:
             multidão (larga), abraço (vertical alta), comunidade e zona rural */}
         <div className="lg:col-span-7">
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-12 md:grid-rows-2 md:gap-5 lg:h-[600px]">
-            <Reveal variant="clip" className="col-span-2 md:col-span-8">
+          <div className="grid grid-cols-2 gap-4 md:h-[440px] md:grid-cols-12 md:grid-rows-2 md:gap-5 lg:h-[600px]">
+            <Reveal variant="clip" className="col-span-2 max-md:order-1 md:col-span-8">
               <JourneyPhoto
                 src={multidaoAsset.url}
                 alt={PHOTOS.journeyMain.alt}
                 className="aspect-[16/11] md:aspect-auto md:h-full"
               />
             </Reveal>
-            <Reveal variant="clip" delay={110} className="col-span-2 md:col-span-4 md:row-span-2">
+            <Reveal
+              variant="clip"
+              delay={290}
+              className="col-span-2 max-md:order-4 md:col-span-4 md:row-span-2"
+            >
               <JourneyPhoto
                 src={abracoComunidadeAsset.url}
                 alt={PHOTOS.journeyC.alt}
                 className="aspect-[4/5] md:aspect-auto md:h-full"
               />
             </Reveal>
-            <Reveal variant="clip" delay={200}>
+            <Reveal variant="clip" delay={110} className="max-md:order-2 md:col-span-4">
               <JourneyPhoto
                 src={comunidadeAsset.url}
                 alt={PHOTOS.journeyA.alt}
                 className="aspect-[4/3] md:aspect-auto md:h-full"
               />
             </Reveal>
-            <Reveal variant="clip" delay={290}>
+            <Reveal variant="clip" delay={200} className="max-md:order-3 md:col-span-4">
               <JourneyPhoto
                 src={zonaRuralAsset.url}
                 alt={PHOTOS.journeyB.alt}
