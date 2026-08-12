@@ -130,7 +130,9 @@ function SecondaryCard({ item }: { item: AlepiWorkItem }) {
 }
 
 export function AlepiWork() {
-  const [featured, ...secondary] = ALEPI_WORK;
+  const featured = ALEPI_WORK[0];
+  const secondary = ALEPI_WORK.slice(1);
+  if (!featured) return null;
 
   return (
     <section id="trabalho" className="scroll-mt-20 bg-paper py-20 lg:py-28">
