@@ -21,7 +21,7 @@ export function EmbraceBanner() {
       {/* Overlay azul escuro para não competir com o conteúdo vizinho */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-night/80"
+        className="absolute inset-0 -z-10 bg-night/65"
       />
 
       {/* Gradiente sutil para melhorar legibilidade do texto */}
@@ -30,7 +30,7 @@ export function EmbraceBanner() {
         className="absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(80% 60% at 50% 50%, transparent 0%, var(--color-night) 100%)",
+            "radial-gradient(70% 55% at 50% 45%, transparent 0%, color-mix(in oklab, var(--color-night) 75%, transparent) 100%)",
         }}
       />
 
