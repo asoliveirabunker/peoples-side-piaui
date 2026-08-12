@@ -73,6 +73,8 @@
   --color-night: oklch(0.212 0.059 258.1);
   --color-sun: oklch(0.786 0.165 74.7);
   --color-sun-bright: oklch(0.839 0.168 82.8);
+  /* #9C6500 — texto do chip "VIROU LEI" sobre fundo amarelo suave */
+  --color-sun-deep: oklch(0.55 0.112 75.4);
   --color-paper: oklch(0.969 0.005 106.5);
   --color-ink: oklch(0.187 0.011 268.1);
 
