@@ -1,24 +1,49 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Header } from "@/components/site/Header";
+import { Hero } from "@/components/site/Hero";
+import { Presence } from "@/components/site/Presence";
+import { Journey } from "@/components/site/Journey";
+import { Trust } from "@/components/site/Trust";
+import { WorkAreas } from "@/components/site/WorkAreas";
+import { HumanSide } from "@/components/site/HumanSide";
+import { Updates } from "@/components/site/Updates";
+import { Footer } from "@/components/site/Footer";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Georgiano Neto — Deputado Estadual do Piauí" },
+      {
+        name: "description",
+        content:
+          "Do lado do povo. Presente onde a vida acontece. Conheça a trajetória, o trabalho e a caminhada de Georgiano Neto, deputado estadual do Piauí.",
+      },
+      { property: "og:title", content: "Georgiano Neto — Deputado Estadual do Piauí" },
+      {
+        property: "og:description",
+        content: "Do lado do povo. Presente onde a vida acontece.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="overflow-x-clip bg-night">
+      <Header />
+      <main>
+        <Hero />
+        <Presence />
+        <Journey />
+        <Trust />
+        <WorkAreas />
+        <HumanSide />
+        <Updates />
+      </main>
+      <Footer />
     </div>
   );
 }

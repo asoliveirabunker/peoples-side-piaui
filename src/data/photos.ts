@@ -1,0 +1,51 @@
+/**
+ * Slots de fotografia do site.
+ *
+ * Cada entrada descreve uma posição de imagem. Hoje todas renderizam como
+ * PhotoPlaceholder (bloco de marca). Quando os arquivos oficiais chegarem,
+ * basta trocar a entrada por um import real da imagem no componente
+ * correspondente — labels e alt texts já estão prontos aqui.
+ */
+export type PhotoSlot = {
+  id: string;
+  label: string;
+  alt: string;
+};
+
+export const PHOTOS = {
+  hero: {
+    id: "hero",
+    label: "Foto oficial — Hero (recorte)",
+    alt: "Georgiano Neto sorrindo, falando ao microfone",
+  },
+  presence: {
+    id: "presence",
+    label: "Foto oficial — Abraço",
+    alt: "Georgiano Neto abraçando uma moradora durante visita",
+  },
+  journeyMain: {
+    id: "journey-main",
+    label: "Foto oficial — Cavalgada / multidão",
+    alt: "Grande presença popular em caminhada pelo Piauí",
+  },
+  journeyA: {
+    id: "journey-a",
+    label: "Foto oficial — Comunidade",
+    alt: "Georgiano Neto com moradores de uma comunidade",
+  },
+  journeyB: {
+    id: "journey-b",
+    label: "Foto oficial — Zona rural",
+    alt: "Georgiano Neto ao lado de famílias da zona rural",
+  },
+  human: {
+    id: "human",
+    label: "Foto oficial — Cozinha",
+    alt: "Georgiano Neto cozinhando em momento descontraído",
+  },
+  footer: {
+    id: "footer",
+    label: "Foto oficial — Recorte",
+    alt: "Georgiano Neto acenando para a população",
+  },
+} as const satisfies Record<string, PhotoSlot>;
