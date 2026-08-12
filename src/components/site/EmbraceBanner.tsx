@@ -24,7 +24,7 @@ export function EmbraceBanner() {
         className="absolute inset-0 z-10"
         style={{
           background:
-            "radial-gradient(65% 95% at 50% 50%, color-mix(in oklab, var(--color-night) 60%, transparent) 0%, color-mix(in oklab, var(--color-night) 30%, transparent) 100%)",
+            "radial-gradient(65% 95% at 50% 50%, color-mix(in oklab, var(--color-night) 75%, transparent) 0%, color-mix(in oklab, var(--color-night) 35%, transparent) 100%)",
         }}
       />
 
