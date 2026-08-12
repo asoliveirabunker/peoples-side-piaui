@@ -6,12 +6,12 @@ export function EmbraceBanner() {
   return (
     <section
       aria-label="Momento de proximidade com a população"
-      className="relative isolate overflow-hidden"
+      className="relative z-0 overflow-hidden"
     >
       {/* Imagem de fundo com leve aumente de brilho para destacar o abraço */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-20 bg-cover bg-center"
+        className="absolute inset-0 z-0 bg-cover bg-center"
         style={{
           backgroundImage: `url(${abracoAsset.url})`,
           filter: "brightness(1.1)",
@@ -21,7 +21,7 @@ export function EmbraceBanner() {
       {/* Overlay leve para manter legibilidade sem esconder o abraço */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-night/35"
+        className="absolute inset-0 z-10 bg-night/35"
       />
 
       {/* Faixas decorativas de identidade */}
