@@ -55,8 +55,6 @@ export function Footer() {
           "linear-gradient(135deg, var(--color-brand) 0%, var(--color-brand-mid) 48%, var(--color-brand-deep) 100%)",
       }}
     >
-      <Band className="-left-24 top-16 h-20 w-[40%] opacity-30" rotate={-12} flip />
-
       <div className="relative z-10 mx-auto grid max-w-[1280px] items-center gap-14 px-5 py-16 md:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:py-24">
         <div>
           <Reveal>
