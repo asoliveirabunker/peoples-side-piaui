@@ -1,7 +1,7 @@
 import { ButtonLink } from "./Button";
-import { PhotoPlaceholder } from "./PhotoPlaceholder";
 import { Reveal } from "./Reveal";
 import { PHOTOS } from "@/data/photos";
+import heroAsset from "@/assets/georgiano-hero.png.asset.json";
 
 export function Hero() {
   return (
@@ -17,7 +17,7 @@ export function Hero() {
       />
 
       <div className="relative z-10 mx-auto grid min-h-svh max-w-[1280px] items-center gap-12 px-5 pb-16 pt-28 md:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:pb-10 lg:pt-32">
-        <div className="max-w-xl">
+        <div className="max-w-xl lg:self-center">
           <Reveal>
             <p className="flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.26em] text-white/60">
               <span
@@ -56,16 +56,24 @@ export function Hero() {
           </Reveal>
         </div>
 
-        <div className="relative">
+        {/* Foto oficial — fundida ao fundo com fade, sem moldura nem cartão */}
+        <div className="relative flex items-end justify-center lg:self-stretch">
+          {/* Brilho sutil da marca para destacar a silhueta do fundo */}
           <div
             aria-hidden="true"
-            className="absolute -bottom-3 -right-3 h-full w-full rounded-2xl bg-sun/15"
+            className="absolute inset-x-0 bottom-0 top-[12%]"
+            style={{
+              background:
+                "radial-gradient(58% 62% at 50% 46%, color-mix(in oklab, var(--color-brand) 42%, transparent) 0%, transparent 72%)",
+            }}
           />
-          <Reveal variant="clip" delay={200} className="relative z-10 mx-auto max-w-md lg:max-w-none">
-            <PhotoPlaceholder
-              label={PHOTOS.hero.label}
+          <Reveal delay={200} className="relative z-10">
+            <img
+              src={heroAsset.url}
               alt={PHOTOS.hero.alt}
-              className="h-[54vh] lg:h-[74vh]"
+              fetchPriority="high"
+              decoding="async"
+              className="hero-photo-fade mx-auto h-[48vh] w-auto max-w-full object-contain lg:h-[76vh]"
             />
           </Reveal>
         </div>
