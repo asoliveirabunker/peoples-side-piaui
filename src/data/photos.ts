@@ -1,9 +1,9 @@
 /**
  * Slots de fotografia do site.
  *
- * Cada entrada descreve uma posição de imagem. Hero, Presença e Nossa
- * Caminhada já usam as fotos oficiais (assets CDN); as demais renderizam
- * como PhotoPlaceholder (bloco de marca). Quando os arquivos oficiais
+ * Cada entrada descreve uma posição de imagem. Hero, Presença, Nossa
+ * Caminhada e o rodapé já usam as fotos oficiais (assets CDN); as demais
+ * renderizam como PhotoPlaceholder (bloco de marca). Quando os arquivos oficiais
  * chegarem, basta trocar a entrada por um import real da imagem no
  * componente correspondente — labels e alt texts já estão prontos aqui.
  */
@@ -51,7 +51,7 @@ export const PHOTOS = {
   },
   footer: {
     id: "footer",
-    label: "Foto oficial — Recorte",
-    alt: "Georgiano Neto acenando para a população",
+    label: "Foto oficial — Aceno",
+    alt: "Georgiano Neto acenando para a população em encontro com apoiadores",
   },
 } as const satisfies Record<string, PhotoSlot>;

@@ -1,8 +1,8 @@
 import { Instagram, Landmark, Mail } from "lucide-react";
-import { PhotoPlaceholder } from "./PhotoPlaceholder";
 import { Reveal } from "./Reveal";
 import { CONTACTS } from "@/data/navigation";
 import { PHOTOS } from "@/data/photos";
+import acenoAsset from "@/assets/georgiano-aceno.png.asset.json";
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -95,12 +95,46 @@ export function Footer() {
 
         <div className="relative hidden lg:block">
           <Reveal variant="clip" delay={150} className="relative z-10">
-            <PhotoPlaceholder
-              label={PHOTOS.footer.label}
-              alt={PHOTOS.footer.alt}
-              ratio="4 / 5"
-              className="mx-auto max-w-sm"
-            />
+            <figure className="mx-auto w-full max-w-[340px]">
+              <div className="relative">
+                {/* Marcas de canto — mira de foto */}
+                <div
+                  aria-hidden="true"
+                  className="absolute -left-2.5 -top-2.5 h-5 w-5 border-l-2 border-t-2 border-white/30"
+                />
+                <div
+                  aria-hidden="true"
+                  className="absolute -right-2.5 -top-2.5 h-5 w-5 border-r-2 border-t-2 border-white/30"
+                />
+                <div
+                  aria-hidden="true"
+                  className="absolute -bottom-2.5 -left-2.5 h-5 w-5 border-b-2 border-l-2 border-white/30"
+                />
+                <div
+                  aria-hidden="true"
+                  className="absolute -bottom-2.5 -right-2.5 h-5 w-5 border-b-2 border-r-2 border-white/30"
+                />
+                {/* Proporção 2:3 nativa da foto — object-cover sem corte
+                    (não corta a mão erguida nem a cabeça) */}
+                <img
+                  src={acenoAsset.url}
+                  alt={PHOTOS.footer.alt}
+                  loading="lazy"
+                  decoding="async"
+                  style={{ aspectRatio: "2 / 3" }}
+                  className="block w-full rounded-md object-cover ring-1 ring-white/15 shadow-[0_28px_70px_-28px_color-mix(in_oklab,var(--color-night)_80%,transparent)]"
+                />
+              </div>
+              <figcaption className="mt-5 flex items-center gap-2">
+                <span
+                  aria-hidden="true"
+                  className="h-1.5 w-1.5 shrink-0 rounded-full bg-sun animate-pulse-soft"
+                />
+                <span className="font-display text-[11px] font-medium uppercase tracking-[0.18em] text-white/65">
+                  {PHOTOS.footer.label}
+                </span>
+              </figcaption>
+            </figure>
           </Reveal>
         </div>
       </div>
