@@ -1,11 +1,11 @@
 /**
  * Slots de fotografia do site.
  *
- * Cada entrada descreve uma posição de imagem. Hero e Presença já usam as
- * fotos oficiais (assets CDN); as demais renderizam como PhotoPlaceholder
- * (bloco de marca). Quando os arquivos oficiais chegarem, basta trocar a
- * entrada por um import real da imagem no componente correspondente —
- * labels e alt texts já estão prontos aqui.
+ * Cada entrada descreve uma posição de imagem. Hero, Presença e Nossa
+ * Caminhada já usam as fotos oficiais (assets CDN); as demais renderizam
+ * como PhotoPlaceholder (bloco de marca). Quando os arquivos oficiais
+ * chegarem, basta trocar a entrada por um import real da imagem no
+ * componente correspondente — labels e alt texts já estão prontos aqui.
  */
 export type PhotoSlot = {
   id: string;
@@ -26,18 +26,23 @@ export const PHOTOS = {
   },
   journeyMain: {
     id: "journey-main",
-    label: "Foto oficial — Cavalgada / multidão",
-    alt: "Grande presença popular em caminhada pelo Piauí",
+    label: "Foto oficial — Multidão",
+    alt: "Georgiano Neto com dezenas de apoiadores em encontro comunitário",
   },
   journeyA: {
     id: "journey-a",
     label: "Foto oficial — Comunidade",
-    alt: "Georgiano Neto com moradores de uma comunidade",
+    alt: "Georgiano Neto cumprimentando moradores em reunião comunitária",
   },
   journeyB: {
     id: "journey-b",
     label: "Foto oficial — Zona rural",
-    alt: "Georgiano Neto ao lado de famílias da zona rural",
+    alt: "Georgiano Neto com lideranças no pórtico de Prata do Piauí",
+  },
+  journeyC: {
+    id: "journey-c",
+    label: "Foto oficial — Abraço em comunidade",
+    alt: "Georgiano Neto abraçando uma senhora durante visita à comunidade",
   },
   human: {
     id: "human",
