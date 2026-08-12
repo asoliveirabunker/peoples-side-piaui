@@ -8,15 +8,15 @@ export function EmbraceBanner() {
       aria-label="Momento de proximidade com a população"
       className="relative overflow-hidden"
     >
-      {/* Imagem de fundo com leve aumento de brilho para destacar o abraço */}
-      <div className="absolute inset-0 -z-20">
-        <img
-          src={abracoAsset.url}
-          alt="Georgiano Neto abraçando uma moradora durante encontro com a população"
-          className="h-full w-full object-cover object-center brightness-[1.1]"
-          loading="lazy"
-        />
-      </div>
+      {/* Imagem de fundo com leve aumente de brilho para destacar o abraço */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-20 bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${abracoAsset.url})`,
+          filter: "brightness(1.1)",
+        }}
+      />
 
       {/* Overlay leve para manter legibilidade sem esconder o abraço */}
       <div
