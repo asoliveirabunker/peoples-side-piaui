@@ -49,7 +49,10 @@ export function EmbraceBanner() {
         </Reveal>
 
         <Reveal delay={120}>
-          <h2 className="mt-4 max-w-4xl font-display text-[clamp(2.5rem,7vw,5.5rem)] font-bold uppercase leading-[0.95] text-white">
+          <h2
+            className="mt-4 max-w-4xl font-display text-[clamp(2.5rem,7vw,5.5rem)] font-bold uppercase leading-[0.95] text-white"
+            style={{ textShadow: "0 4px 24px color-mix(in oklab, var(--color-night) 70%, transparent)" }}
+          >
             Do lado do povo,
             <span className="block text-sun">sempre.</span>
           </h2>
