@@ -5,7 +5,6 @@ import { Presence } from "@/components/site/Presence";
 import { Journey } from "@/components/site/Journey";
 import { Trust } from "@/components/site/Trust";
 import { HumanSide } from "@/components/site/HumanSide";
-import { Updates } from "@/components/site/Updates";
 import { Footer } from "@/components/site/Footer";
 
 export const Route = createFileRoute("/")({
@@ -39,7 +38,6 @@ function Index() {
         <Journey />
         <Trust />
         <HumanSide />
-        <Updates />
       </main>
       <Footer />
     </div>
