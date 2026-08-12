@@ -39,6 +39,7 @@ function Index() {
         <Presence />
         <Journey />
         <Trust />
+        <EmbraceBanner />
         <HumanSide />
         <Updates />
       </main>
