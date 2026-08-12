@@ -1,15 +1,27 @@
-import { ChefHat, GraduationCap, Heart, MapPin, Vote, type LucideIcon } from "lucide-react";
-
 export type Fact = {
   id: string;
-  icon: LucideIcon;
   text: string;
 };
 
 export const FACTS: Fact[] = [
-  { id: "01", icon: MapPin, text: "Filho de Teresina." },
-  { id: "02", icon: GraduationCap, text: "Formado em Direito." },
-  { id: "03", icon: Vote, text: "Eleito deputado estadual aos 20 anos." },
-  { id: "04", icon: ChefHat, text: "Gosta de cozinhar. Especialidade: lasanha." },
-  { id: "05", icon: Heart, text: "Pai da Ana Jussara." },
+  {
+    id: "01",
+    text: "Sou filho de Teresina, tenho 32 anos e sou formado em direito;",
+  },
+  {
+    id: "02",
+    text: "Fui o deputado estadual mais jovem eleito do Brasil em 2014, e fui o mais votado da história do Piauí em 2018 e 2022;",
+  },
+  {
+    id: "03",
+    text: "Minhas comidas preferidas são galinha caipira e pudim;",
+  },
+  {
+    id: "04",
+    text: "Adoro cozinhar, minha especialidade é lasanha;",
+  },
+  {
+    id: "05",
+    text: "Em 2025 ganhei o maior presente da minha vida, minha filha Ana Jussara.",
+  },
 ];
