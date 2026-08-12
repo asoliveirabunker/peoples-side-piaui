@@ -13,35 +13,35 @@ export function EmbraceBanner() {
         <img
           src={abracoAsset.url}
           alt="Georgiano Neto abraçando uma moradora durante encontro com a população"
-          className="h-full w-full object-cover object-[45%_30%] brightness-[1.15]"
+          className="h-full w-full object-cover object-center brightness-[1.1]"
           loading="lazy"
         />
       </div>
 
-      {/* Overlay: bordas escuras para legibilidade, centro aberto para revelar o abraço */}
+      {/* Overlay: bordas escuras para legibilidade, centro mais claro para revelar o abraço */}
       <div
         aria-hidden="true"
         className="absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(75% 90% at 45% 35%, transparent 0%, color-mix(in oklab, var(--color-night) 55%, transparent) 100%)",
+            "radial-gradient(70% 120% at 50% 45%, color-mix(in oklab, var(--color-night) 30%, transparent) 0%, color-mix(in oklab, var(--color-night) 65%, transparent) 100%)",
         }}
       />
 
       {/* Faixas decorativas de identidade */}
       <Band
         animated
-        className="-right-40 top-8 hidden h-20 w-[45%] opacity-60 lg:block"
+        className="-right-40 top-6 hidden h-16 w-[40%] opacity-50 lg:block"
         rotate={-12}
       />
       <Band
         animated
-        className="-left-40 bottom-8 hidden h-16 w-[40%] opacity-40 lg:block"
+        className="-left-40 bottom-6 hidden h-12 w-[35%] opacity-30 lg:block"
         rotate={-12}
         flip
       />
 
-      <div className="relative z-10 mx-auto flex min-h-[50vh] max-w-[1280px] flex-col items-center justify-center px-5 py-20 text-center md:min-h-[60vh] md:px-6 lg:py-28">
+      <div className="relative z-10 mx-auto flex min-h-[36vh] max-w-[1280px] flex-col items-center justify-center px-5 py-16 text-center md:min-h-[42vh] md:px-6 lg:min-h-[48vh] lg:py-20">
         <Reveal>
           <p className="text-xs font-semibold uppercase tracking-[0.26em] text-sun">
             Presença de verdade
