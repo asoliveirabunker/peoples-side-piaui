@@ -15,15 +15,22 @@ export function Hero() {
             "radial-gradient(90% 70% at 78% 0%, var(--color-brand-deep) 0%, transparent 62%), linear-gradient(180deg, var(--color-brand-deep) 0%, var(--color-night) 72%)",
         }}
       />
+      {/* Brilho amarelo suave no canto inferior esquerdo — equilibra a composição */}
+      <div
+        aria-hidden="true"
+        className="absolute -bottom-24 -left-24 h-96 w-96 rounded-full bg-sun/10 blur-[120px]"
+      />
+      {/* Chão sutil que assenta a figura na base da seção */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-28 bg-gradient-to-t from-night/70 to-transparent"
+      />
 
-      <div className="relative z-10 mx-auto grid min-h-svh max-w-[1280px] items-center gap-12 px-5 pb-16 pt-28 md:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:pb-10 lg:pt-32">
+      <div className="relative z-10 mx-auto grid min-h-svh max-w-[1280px] items-center gap-12 px-5 pt-28 md:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8 lg:pt-32">
         <div className="max-w-xl lg:self-center">
           <Reveal>
-            <p className="flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.26em] text-white/60">
-              <span
-                aria-hidden="true"
-                className="h-1.5 w-1.5 rounded-full bg-sun animate-pulse-soft"
-              />
+            <p className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.26em] text-sun">
+              <span aria-hidden="true" className="h-[2px] w-10 bg-sun" />
               Georgiano Neto
             </p>
           </Reveal>
@@ -56,15 +63,15 @@ export function Hero() {
           </Reveal>
         </div>
 
-        {/* Foto oficial — fundida ao fundo com fade, sem moldura nem cartão */}
-        <div className="relative flex items-end justify-center lg:self-stretch">
-          {/* Brilho sutil da marca para destacar a silhueta do fundo */}
+        {/* Foto oficial — ancorada na base do hero, fundida ao fundo com fade */}
+        <div className="relative flex items-end justify-center self-end lg:self-stretch">
+          {/* Brilho da marca atrás da silhueta */}
           <div
             aria-hidden="true"
-            className="absolute inset-x-0 bottom-0 top-[12%]"
+            className="absolute inset-x-0 bottom-0 top-[8%]"
             style={{
               background:
-                "radial-gradient(58% 62% at 50% 46%, color-mix(in oklab, var(--color-brand) 42%, transparent) 0%, transparent 72%)",
+                "radial-gradient(58% 62% at 50% 46%, color-mix(in oklab, var(--color-brand) 50%, transparent) 0%, transparent 72%)",
             }}
           />
           <Reveal delay={200} className="relative z-10">
@@ -73,10 +80,22 @@ export function Hero() {
               alt={PHOTOS.hero.alt}
               fetchPriority="high"
               decoding="async"
-              className="hero-photo-fade mx-auto h-[48vh] w-auto max-w-full object-contain lg:h-[76vh]"
+              className="hero-photo-fade mx-auto h-[54vh] w-auto max-w-full object-contain object-bottom lg:h-[calc(100svh-9rem)] lg:max-h-[940px] lg:max-w-none xl:origin-bottom xl:scale-105"
             />
           </Reveal>
         </div>
+      </div>
+
+      {/* Tag vertical decorativa — só em telas bem largas, longe da foto */}
+      <div
+        aria-hidden="true"
+        className="absolute right-6 top-1/2 z-10 hidden -translate-y-1/2 flex-col items-center gap-8 opacity-20 min-[1440px]:flex"
+      >
+        <span className="h-24 w-px bg-white" />
+        <span className="vertical-text rotate-180 font-display text-[10px] font-semibold uppercase tracking-[0.5em] text-white">
+          Piauí no coração
+        </span>
+        <span className="h-24 w-px bg-white" />
       </div>
     </section>
   );
