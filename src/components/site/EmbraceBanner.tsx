@@ -6,7 +6,7 @@ export function EmbraceBanner() {
   return (
     <section
       aria-label="Momento de proximidade com a população"
-      className="relative overflow-hidden"
+      className="relative isolate overflow-hidden"
     >
       {/* Imagem de fundo com leve aumente de brilho para destacar o abraço */}
       <div
