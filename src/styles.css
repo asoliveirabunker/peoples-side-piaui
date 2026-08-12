@@ -342,6 +342,18 @@
   background: var(--color-sun);
 }
 
+/* Fade que funde a foto do hero ao fundo: dissolve a base e suaviza a borda esquerda */
+@utility hero-photo-fade {
+  -webkit-mask-image:
+    linear-gradient(to bottom, black 55%, transparent 96%),
+    linear-gradient(to right, transparent 0%, black 16%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to bottom, black 55%, transparent 96%),
+    linear-gradient(to right, transparent 0%, black 16%);
+  mask-composite: intersect;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal,
   .reveal-clip,
