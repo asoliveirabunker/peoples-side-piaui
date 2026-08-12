@@ -18,10 +18,14 @@ export function EmbraceBanner() {
         }}
       />
 
-      {/* Overlay leve para manter legibilidade sem esconder o abraço */}
+      {/* Overlay: centro mais escuro para legibilidade do texto, bordas mais claras para revelar o abraço */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 z-10 bg-night/35"
+        className="absolute inset-0 z-10"
+        style={{
+          background:
+            "radial-gradient(65% 95% at 50% 50%, color-mix(in oklab, var(--color-night) 60%, transparent) 0%, color-mix(in oklab, var(--color-night) 30%, transparent) 100%)",
+        }}
       />
 
       {/* Faixas decorativas de identidade */}
