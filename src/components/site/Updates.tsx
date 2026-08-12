@@ -1,5 +1,4 @@
 import { Instagram, MapPin } from "lucide-react";
-import { Band } from "./Band";
 import { ButtonLink } from "./Button";
 import { PhotoPlaceholder } from "./PhotoPlaceholder";
 import { Reveal } from "./Reveal";
@@ -9,8 +8,6 @@ import { UPDATES } from "@/data/updates";
 export function Updates() {
   return (
     <section id="agora" className="grain relative scroll-mt-20 overflow-hidden bg-night py-20 lg:py-28">
-      <Band className="-right-28 top-10 h-24 w-[42%] opacity-40" rotate={-12} />
-
       <div className="relative z-10 mx-auto max-w-[1280px] px-5 md:px-6">
         <div className="flex flex-wrap items-end justify-between gap-8">
           <Reveal>
