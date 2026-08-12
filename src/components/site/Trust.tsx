@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import { CountUp } from "./CountUp";
 import { Reveal, useReveal } from "./Reveal";
 import { ELECTIONS } from "@/data/elections";
 
@@ -25,9 +26,13 @@ export function Trust() {
             </p>
           </Reveal>
           <Reveal delay={210}>
-            <div className="mt-8 flex max-w-md items-center gap-4 rounded-2xl border border-sun/50 bg-sun/10 p-5">
-              <Star className="h-6 w-6 shrink-0 text-sun" fill="currentColor" aria-hidden="true" />
-              <p className="font-display text-sm font-semibold uppercase leading-snug tracking-[0.06em] text-ink">
+            <div className="trust-badge mt-10 flex max-w-lg items-center gap-5 rounded-2xl px-6 py-6 md:px-7 md:py-7">
+              <Star
+                className="trust-star h-11 w-11 shrink-0 md:h-14 md:w-14"
+                fill="currentColor"
+                aria-hidden="true"
+              />
+              <p className="font-display text-lg font-bold uppercase leading-tight tracking-[0.05em] text-ink md:text-2xl">
                 Deputado estadual mais votado da história do Piauí.
               </p>
             </div>
@@ -41,8 +46,8 @@ export function Trust() {
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand">
                   {election.year}
                 </p>
-                <p className="mt-1 font-display text-3xl font-bold text-brand-deep md:text-5xl">
-                  {election.votes.toLocaleString("pt-BR")}
+                <p className="mt-1 font-display text-3xl font-bold tabular-nums text-brand-deep md:text-5xl">
+                  <CountUp value={election.votes} start={visible} delay={index * 140} duration={1300} />
                 </p>
                 <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-ink/40">
                   Votos
