@@ -13,24 +13,18 @@ export function EmbraceBanner() {
         <img
           src={abracoAsset.url}
           alt="Georgiano Neto abraçando uma moradora durante encontro com a população"
-          className="h-full w-full object-cover object-center"
+          className="h-full w-full object-cover object-[55%_40%]"
           loading="lazy"
         />
       </div>
 
-      {/* Overlay azul escuro para não competir com o conteúdo vizinho */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-night/65"
-      />
-
-      {/* Gradiente sutil para melhorar legibilidade do texto */}
+      {/* Overlay: centro transparente para revelar o abraço, bordas escuras para legibilidade */}
       <div
         aria-hidden="true"
         className="absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(70% 55% at 50% 45%, transparent 0%, color-mix(in oklab, var(--color-night) 75%, transparent) 100%)",
+            "radial-gradient(65% 80% at 55% 42%, color-mix(in oklab, var(--color-night) 25%, transparent) 0%, color-mix(in oklab, var(--color-night) 78%, transparent) 100%)",
         }}
       />
 
