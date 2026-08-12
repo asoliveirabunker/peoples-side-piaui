@@ -4,7 +4,6 @@ import { Hero } from "@/components/site/Hero";
 import { Presence } from "@/components/site/Presence";
 import { Journey } from "@/components/site/Journey";
 import { Trust } from "@/components/site/Trust";
-import { WorkAreas } from "@/components/site/WorkAreas";
 import { HumanSide } from "@/components/site/HumanSide";
 import { Updates } from "@/components/site/Updates";
 import { Footer } from "@/components/site/Footer";
@@ -39,7 +38,6 @@ function Index() {
         <Presence />
         <Journey />
         <Trust />
-        <WorkAreas />
         <HumanSide />
         <Updates />
       </main>
