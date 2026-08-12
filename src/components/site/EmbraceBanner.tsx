@@ -8,7 +8,7 @@ export function EmbraceBanner() {
       aria-label="Momento de proximidade com a população"
       className="relative z-0 overflow-hidden"
     >
-      {/* Imagem de fundo com leve aumente de brilho para destacar o abraço */}
+      {/* Imagem de fundo com leve aumento de brilho para destacar o abraço */}
       <div
         aria-hidden="true"
         className="absolute inset-0 z-0 bg-cover bg-center"
