@@ -1,5 +1,4 @@
 import { Reveal } from "./Reveal";
-import { Band } from "./Band";
 import abracoAsset from "@/assets/abraco.png.asset.json";
 
 export function EmbraceBanner() {

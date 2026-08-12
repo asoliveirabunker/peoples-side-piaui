@@ -1,4 +1,3 @@
-import { Band } from "./Band";
 import { ButtonLink } from "./Button";
 import { PhotoPlaceholder } from "./PhotoPlaceholder";
 import { Reveal } from "./Reveal";
@@ -65,7 +64,6 @@ export function Hero() {
         </div>
 
         <div className="relative">
-          <Band className="-left-10 top-12 h-28 w-[125%]" rotate={-10} />
           <div
             aria-hidden="true"
             className="absolute -bottom-3 -right-3 h-full w-full rounded-2xl bg-sun/15"

@@ -1,5 +1,4 @@
 import { Instagram, Landmark, Mail } from "lucide-react";
-import { Band } from "./Band";
 import { PhotoPlaceholder } from "./PhotoPlaceholder";
 import { Reveal } from "./Reveal";
 import { CONTACTS } from "@/data/navigation";
@@ -97,7 +96,6 @@ export function Footer() {
         </div>
 
         <div className="relative hidden lg:block">
-          <Band className="-right-8 top-14 h-24 w-[115%]" rotate={-10} />
           <Reveal variant="clip" delay={150} className="relative z-10">
             <PhotoPlaceholder
               label={PHOTOS.footer.label}
