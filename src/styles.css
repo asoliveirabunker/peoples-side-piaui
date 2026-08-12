@@ -342,6 +342,12 @@
   background: var(--color-sun);
 }
 
+/* Texto vertical — tag decorativa do hero ("Piauí no coração") */
+@utility vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
 /* Fade que funde a foto do hero ao fundo: dissolve a base e suaviza a borda esquerda */
 @utility hero-photo-fade {
   -webkit-mask-image:
