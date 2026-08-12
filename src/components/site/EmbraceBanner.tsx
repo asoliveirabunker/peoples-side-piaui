@@ -27,19 +27,6 @@ export function EmbraceBanner() {
         }}
       />
 
-      {/* Faixas decorativas de identidade */}
-      <Band
-        animated
-        className="-right-40 top-6 hidden h-16 w-[40%] opacity-50 lg:block"
-        rotate={-12}
-      />
-      <Band
-        animated
-        className="-left-40 bottom-6 hidden h-12 w-[35%] opacity-30 lg:block"
-        rotate={-12}
-        flip
-      />
-
       <div className="relative z-10 mx-auto flex min-h-[36vh] max-w-[1280px] flex-col items-center justify-center px-5 py-16 text-center md:min-h-[42vh] md:px-6 lg:min-h-[48vh] lg:py-20">
         <Reveal>
           <p className="text-xs font-semibold uppercase tracking-[0.26em] text-sun">

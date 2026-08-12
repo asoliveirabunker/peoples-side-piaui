@@ -15,13 +15,6 @@ export function Hero() {
             "radial-gradient(90% 70% at 78% 0%, var(--color-brand-deep) 0%, transparent 62%), linear-gradient(180deg, var(--color-brand-deep) 0%, var(--color-night) 72%)",
         }}
       />
-      <Band animated className="-right-32 top-24 hidden h-36 w-[52%] lg:block" rotate={-12} />
-      <Band
-        animated
-        className="-left-36 bottom-20 hidden h-20 w-[46%] opacity-50 md:block"
-        rotate={-12}
-        flip
-      />
 
       <div className="relative z-10 mx-auto grid min-h-svh max-w-[1280px] items-center gap-12 px-5 pb-16 pt-28 md:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 lg:pb-10 lg:pt-32">
         <div className="max-w-xl">
