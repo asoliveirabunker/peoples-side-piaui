@@ -153,7 +153,7 @@ export function AlepiWork() {
         </Reveal>
 
         {/* 1 protagonista + 3 secundários (empilha no mobile, ordem 01→04) */}
-        <div className="mt-12 grid items-stretch gap-4 md:mt-14 lg:grid-cols-[1.25fr_1fr] lg:gap-6">
+        <div className="mt-12 grid items-stretch gap-4 md:mt-14 lg:grid-cols-[1.35fr_1fr] lg:gap-6">
           <Reveal y={24} className="h-full">
             <FeaturedCard item={featured} />
           </Reveal>
