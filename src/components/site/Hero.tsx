@@ -1,7 +1,8 @@
 import { ButtonLink } from "./Button";
 import { Reveal } from "./Reveal";
 import { PHOTOS } from "@/data/photos";
-import heroAsset from "@/assets/georgiano-hero.png.asset.json";
+import heroAsset from "@/assets/georgiano-hero.webp.asset.json";
+import heroAssetSm from "@/assets/georgiano-hero-640.webp.asset.json";
 
 export function Hero() {
   return (
@@ -77,6 +78,10 @@ export function Hero() {
           <Reveal delay={200} className="relative z-10">
             <img
               src={heroAsset.url}
+              srcSet={`${heroAssetSm.url} 640w, ${heroAsset.url} 1024w`}
+              sizes="(max-width: 1023px) 70vw, 640px"
+              width={1024}
+              height={1536}
               alt={PHOTOS.hero.alt}
               fetchPriority="high"
               decoding="async"

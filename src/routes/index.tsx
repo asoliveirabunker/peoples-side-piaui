@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import heroAsset from "@/assets/georgiano-hero.webp.asset.json";
+import heroAssetSm from "@/assets/georgiano-hero-640.webp.asset.json";
 import { Header } from "@/components/site/Header";
 import { Hero } from "@/components/site/Hero";
 import { Presence } from "@/components/site/Presence";
@@ -24,6 +26,16 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [
+      {
+        rel: "preload",
+        as: "image",
+        href: heroAsset.url,
+        imageSrcSet: `${heroAssetSm.url} 640w, ${heroAsset.url} 1024w`,
+        imageSizes: "(max-width: 1023px) 70vw, 640px",
+        fetchPriority: "high",
+      },
     ],
   }),
   component: Index,
