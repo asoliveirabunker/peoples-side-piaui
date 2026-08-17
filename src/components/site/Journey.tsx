@@ -2,10 +2,10 @@ import { ButtonLink } from "./Button";
 import { Reveal } from "./Reveal";
 import { CONTACTS } from "@/data/navigation";
 import { PHOTOS } from "@/data/photos";
-import multidaoAsset from "@/assets/multidao.png.asset.json";
-import abracoComunidadeAsset from "@/assets/abraco-comunidade.png.asset.json";
-import comunidadeAsset from "@/assets/comunidade.png.asset.json";
-import zonaRuralAsset from "@/assets/zona-rural.png.asset.json";
+import multidaoAsset from "@/assets/multidao.webp.asset.json";
+import abracoComunidadeAsset from "@/assets/abraco-comunidade.webp.asset.json";
+import comunidadeAsset from "@/assets/comunidade.webp.asset.json";
+import zonaRuralAsset from "@/assets/zona-rural.webp.asset.json";
 
 function JourneyPhoto({
   src,

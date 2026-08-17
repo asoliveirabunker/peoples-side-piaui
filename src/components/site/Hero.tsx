@@ -1,7 +1,8 @@
 import { ButtonLink } from "./Button";
 import { Reveal } from "./Reveal";
 import { PHOTOS } from "@/data/photos";
-import heroAsset from "@/assets/georgiano-hero.png.asset.json";
+import heroAsset from "@/assets/georgiano-hero.webp.asset.json";
+import heroAssetSm from "@/assets/georgiano-hero-640.webp.asset.json";
 
 export function Hero() {
   return (

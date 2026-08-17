@@ -1,7 +1,8 @@
 import { Ear, Hammer, Users } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { PHOTOS } from "@/data/photos";
-import abracoAsset from "@/assets/abraco.png.asset.json";
+import abracoAsset from "@/assets/abraco.webp.asset.json";
+import abracoAssetSm from "@/assets/abraco-840.webp.asset.json";
 
 const PRINCIPLES = [
   { icon: Users, title: "Estar perto", description: "Ouvir de perto." },

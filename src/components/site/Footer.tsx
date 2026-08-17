@@ -2,7 +2,7 @@ import { Instagram, Landmark, Mail } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { CONTACTS } from "@/data/navigation";
 import { PHOTOS } from "@/data/photos";
-import acenoAsset from "@/assets/georgiano-aceno.png.asset.json";
+import acenoAsset from "@/assets/georgiano-aceno.webp.asset.json";
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
