@@ -90,10 +90,6 @@ export function Header() {
           open ? "visible opacity-100" : "invisible opacity-0"
         }`}
       >
-        <div aria-hidden="true" className="absolute -right-24 top-28 h-32 w-[85%] -rotate-12">
-          <div className="h-1/2 bg-brand" />
-          <div className="h-1/2 bg-sun" />
-        </div>
 
         <nav aria-label="Menu" className="relative z-10 flex flex-1 flex-col justify-center px-8">
           {NAV_LINKS.map((link, index) => (
