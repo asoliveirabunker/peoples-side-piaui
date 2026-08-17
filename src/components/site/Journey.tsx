@@ -10,10 +10,14 @@ import zonaRuralAsset from "@/assets/zona-rural.webp.asset.json";
 function JourneyPhoto({
   src,
   alt,
+  width,
+  height,
   className,
 }: {
   src: string;
   alt: string;
+  width: number;
+  height: number;
   className?: string;
 }) {
   return (
@@ -21,6 +25,9 @@ function JourneyPhoto({
       <img
         src={src}
         alt={alt}
+        width={width}
+        height={height}
+        sizes="(max-width: 767px) 92vw, 45vw"
         loading="lazy"
         decoding="async"
         className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
@@ -66,6 +73,8 @@ export function Journey() {
             <Reveal variant="clip" className="col-span-2 max-md:order-1 md:col-span-8">
               <JourneyPhoto
                 src={multidaoAsset.url}
+                width={693}
+                height={393}
                 alt={PHOTOS.journeyMain.alt}
                 className="aspect-[16/11] md:aspect-auto md:h-full"
               />
@@ -77,6 +86,8 @@ export function Journey() {
             >
               <JourneyPhoto
                 src={abracoComunidadeAsset.url}
+                width={509}
+                height={856}
                 alt={PHOTOS.journeyC.alt}
                 className="aspect-[4/5] md:aspect-auto md:h-full"
               />
@@ -84,6 +95,8 @@ export function Journey() {
             <Reveal variant="clip" delay={110} className="max-md:order-2 md:col-span-4">
               <JourneyPhoto
                 src={comunidadeAsset.url}
+                width={653}
+                height={383}
                 alt={PHOTOS.journeyA.alt}
                 className="aspect-[4/3] md:aspect-auto md:h-full"
               />
@@ -91,6 +104,8 @@ export function Journey() {
             <Reveal variant="clip" delay={200} className="max-md:order-3 md:col-span-4">
               <JourneyPhoto
                 src={zonaRuralAsset.url}
+                width={649}
+                height={375}
                 alt={PHOTOS.journeyB.alt}
                 className="aspect-[4/3] md:aspect-auto md:h-full"
               />

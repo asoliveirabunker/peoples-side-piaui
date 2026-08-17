@@ -78,6 +78,10 @@ export function Hero() {
           <Reveal delay={200} className="relative z-10">
             <img
               src={heroAsset.url}
+              srcSet={`${heroAssetSm.url} 640w, ${heroAsset.url} 1024w`}
+              sizes="(max-width: 1023px) 70vw, 640px"
+              width={1024}
+              height={1536}
               alt={PHOTOS.hero.alt}
               fetchPriority="high"
               decoding="async"

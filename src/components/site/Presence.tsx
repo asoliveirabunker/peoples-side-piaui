@@ -37,6 +37,10 @@ export function Presence() {
               />
               <img
                 src={abracoAsset.url}
+                srcSet={`${abracoAssetSm.url} 840w, ${abracoAsset.url} 1400w`}
+                sizes="(max-width: 1023px) 92vw, 560px"
+                width={1400}
+                height={788}
                 alt={PHOTOS.presence.alt}
                 loading="lazy"
                 decoding="async"

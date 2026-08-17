@@ -118,6 +118,8 @@ export function Footer() {
                     (não corta a mão erguida nem a cabeça) */}
                 <img
                   src={acenoAsset.url}
+                  width={248}
+                  height={372}
                   alt={PHOTOS.footer.alt}
                   loading="lazy"
                   decoding="async"
